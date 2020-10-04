@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-titulo',
   templateUrl: './titulo.component.html',
-  styleUrls: ['./titulo.component.scss']
+  styleUrls: ['./titulo.component.scss'],
 })
 export class TituloComponent implements OnInit {
+  @Input() nombre: string;
+  @Output() eventTitulo = new EventEmitter();
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -1,27 +1,22 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { InicioComponent } from '../../components/pages/inicio/inicio.component';
 import { FormularioComponent } from '../../components/pages/formulario/formulario.component';
-import { RegistroComponent } from 'src/app/components/pages/registro/registro.component';
+import { RegistrosComponent } from 'src/app/components/pages/registros/registros.component';
 
 const routes: Routes = [
-  {
-    path:"inicio",
-    component : InicioComponent
-  },
-  {
-    path:"formulario",
+   {
+    path:"paises/registrarPais",
     component: FormularioComponent
   },
   {
-    path:"registro",
-    component: RegistroComponent
+    path:"paises/consultarPaises",
+    component: RegistrosComponent
   }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class PaisesRoutingModule { }

@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="panel">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h1>Consulta de Paises</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let item of paises">
+                <div class="card">                   
+                    <div class="text-center"><h2>{{item.nombre}}</h2></div>
+                    <div class="card-body">
+                        <p class="card-text">IdPais: {{item.idPais}}</p>
+                        <p class="card-text">Código Pais: {{item.codigo}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
